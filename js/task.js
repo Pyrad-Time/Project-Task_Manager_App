@@ -29,3 +29,27 @@ export function showTask(task, list) {
     div2.append(btnEdit, btnDel)
     li.append(div1, div2)
 }
+
+export function editTask (e) {  
+    const task = e.target.closest(".task")
+    const title = task.querySelector(".task__title")
+
+    const inputData = document.createElement("input")
+    inputData.value = title.innerHTML
+
+    title.style.display = "none"
+
+    task.append(inputData)
+
+    inputData.focus()
+
+    inputData.addEventListener('keydown', (key) => {
+        if(key.key === "Enter") {
+            title.textContent = inputData.value
+            title.style.display = "block"
+            inputData.remove()
+        }
+    })
+
+ }
+

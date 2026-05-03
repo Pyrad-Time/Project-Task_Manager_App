@@ -8,6 +8,8 @@ const btn = [...button]
 
 import { state } from "./state.js"
 import { render } from "./render.js"
+import { editTask } from "./task.js"
+
 
 
 export function setLocalStorage () {
@@ -23,11 +25,7 @@ export function getLocalStorage() {
 
 }
 
-function editTask (e) {  
-    const task = e.target.closest(".task")
-    const title = task.querySelector(".task__title")
-    console.log(title)
- }
+
 
 
 list.addEventListener("click", (e) => {
@@ -36,6 +34,9 @@ list.addEventListener("click", (e) => {
 
     if(button.dataset.action === "edit")
         editTask(e)
+
+    if(button.dataset.action === "delete") 
+        removeTask(e)
 })
 
 
