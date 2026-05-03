@@ -9,7 +9,7 @@ const btn = [...button]
 import { state } from "./state.js"
 import { render } from "./render.js"
 import { editTask } from "./task.js"
-
+import { removeTask } from "./task.js"
 
 
 export function setLocalStorage () {
@@ -37,12 +37,13 @@ list.addEventListener("click", (e) => {
 
     if(button.dataset.action === "delete") 
         removeTask(e)
+
+    console.log(state.tasks)
 })
 
 
 btn.forEach(buttons => {
     buttons.addEventListener("click", (e) => {
-        console.log(e)
         if(e.currentTarget.dataset.filter) {
             const data = e.target.dataset.filter
             state.status = data
