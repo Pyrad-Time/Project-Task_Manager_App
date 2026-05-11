@@ -46,7 +46,7 @@ This project was built as a learning exercise to practice core frontend concepts
 
 ## 📷 Preview
 
-//////
+<img width="605" height="634" alt="ProjectPreview-Task_Manager_App" src="https://github.com/user-attachments/assets/cbf820bc-38df-4ade-b2e1-8ae50cfe0576" />
 
 ---
 
