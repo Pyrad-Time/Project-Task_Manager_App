@@ -33,7 +33,7 @@ O objetivo deste projeto foi praticar conceitos fundamentais de front-end com Ja
 ## Estrutura do projeto
 
 ```txt
-Task_Manager_App/
+Project-Task_Manager_App/
 ├── index.html
 ├── assets/
 │   └── imgs/
